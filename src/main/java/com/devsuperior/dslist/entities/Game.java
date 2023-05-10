@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import javax.annotation.processing.Generated;
 import java.util.Objects;
 @Entity
-@Table(name = "table_game")
+@Table(name = "tb_game")
 public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,9 @@ public class Game {
     private String platforms;
     private String score;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game(){
